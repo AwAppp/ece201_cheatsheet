@@ -1,0 +1,88 @@
+\documentclass{report}
+
+\title{ECE 205A midterm cheat sheet}
+\author{AnPing Tao}
+\date{\today}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{rotating}
+
+\def\changemargin{\list{}{\rightmargin 0.5cm \leftmargin 0.5cm}\item[]}
+\let\endchangemargin=\endlist
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+\setlength{\parindent}{0pt}
+
+% \definecolor{mybg}{RGB}{72, 38, 82}
+% \definecolor{mytext}{RGB}{177, 215, 183}
+
+% \color{mytext}
+% \pagecolor{mybg}
+
+\begin{document}
+
+\textbf{Def:} A \underline{vector} is a tuple of numbers.
+
+\textbf{Def:} The \underline{dimension} is the size of this tuple.
+
+\textbf{Def:} A \underline{matrix} is a 2-dimensional grid of numbers.
+
+\textbf{Def:} $\mathbb{R}^{m \times n}$ denotes all $m \times n$ matrices with field $\mathbb{R}$.
+
+\textbf{Def:} $\mathbb{C}^{m \times n}$ denotes all $m \times n$ matrices with field $\mathbb{C}$.
+
+\textbf{Def:} vector-matrix product:
+$\begin{bmatrix}
+        a & b \\
+        c & d
+    \end{bmatrix} \cdot
+    \begin{bmatrix}
+        x \\y
+    \end{bmatrix} =
+    \begin{bmatrix}
+        ax + by \\
+        cx + dy
+    \end{bmatrix}$
+(Inner dimensions must agree. Outer dimensions remain.)
+
+$\begin{bmatrix}
+        ax + by \\
+        cx + dy
+    \end{bmatrix} =
+    x \begin{bmatrix}
+        a \\c
+    \end{bmatrix} + y
+    \begin{bmatrix}
+        b \\d
+    \end{bmatrix}$: Express matrix-vector multiplication as a linear combination of the matrix.
+
+\textbf{Def:} \underline{Inner product}
+$<\begin{bmatrix}
+        x_1 \\ x_2 \\ \vdots \\ x_n
+    \end{bmatrix},
+    \begin{bmatrix}
+        y_1 \\ y_2 \\ \vdots \\ y_n
+    \end{bmatrix}> =
+    \begin{bmatrix}
+        x_1 & x_2 & \cdots & x_n
+    \end{bmatrix}
+    \begin{bmatrix}
+        y_1 \\ y_2 \\ \vdots \\ y_n
+    \end{bmatrix} = x_1y_1 + x_2y_2 + \cdots + x_ny_n$
+
+\textbf{Def:} \underline{Matrix Multiplication:} $A \in \mathbb{R}^{m \times k}, B \in \mathbb{R}^{k \times n}$,
+$C = AB \in \mathbb{R}^{m \times n}$ and $C_{ij} = \sum_{k=1}^{n} A_{ik}B_{kj}$.
+
+\textbf{Def:} \underline{span} of vectors $v_1, v_2, \dots, v_n$ is the set of vectors that can be obtained as
+linear combination of the vectors $v_1, v_2, \dots, v_n$:
+
+$span\{v_1, v_2, \dots, v_n\} = a_1v_1 + a_2v_2 + \dots + a_nv_n$ for $a_1, a_2, \dots, a_n$ are scalars.
+\end{document}
