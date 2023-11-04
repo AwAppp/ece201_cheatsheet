@@ -186,4 +186,67 @@ $\mathcal{N}(A) = \{x | Ax = 0\}$.
 
 \textbf{Def:} \underline{Column rank} is the number of linearly independent
 column.
+
+\textbf{Def: }A collection of vectors $U = \{v_1, v_2, \dots, v_n\}$ is
+said to be \underline{linearly independent} if $\sum_{i=1}^{n} a_i v_i = \vec{0}$
+only has $a_1 = a_2 = \dots = a_n = 0$ as the solution. Moreover,
+$span\{U\} = \{\sum_{i=1}^{n} a_i v_i\}$.
+
+\textbf{Def:} A set of vectors $U$ is said to be a basis for a vector
+space $V$ if
+\begin{enumerate}
+    \item $span(U) = V$.
+    \item $U$ is LI.
+\end{enumerate}
+
+\textbf{Def:} Two vectors (in the same vector space) are orthogonal if
+the angle between them is $90^\circ$.
+
+\textbf{Def:} Two subspaces $V, W \subseteq \mathbb{R}^n$ are orthogonal if
+$\forall v \in V \forall w \in W : v^T w = 0$.
+
+\textbf{Def:} Given $V \subseteq \mathbb{R}^n$, its \underline{orthogonal complement}
+is $V^{\perp} = \{w \in \mathbb{R}^n | w^T v = 0 \ \forall v\in V\}$.
+
+\textbf{Def:} \underline{orthogonal decomposition} If $V$ and $W$ form a
+pair of subspaces that are orthogonal complements of each other in $\mathbb{R}^n$,
+then any vector $z \in \mathbb{R}^n$ can be written as $z = v + w$, where
+$v \in V, w \in W$.
+
+\textbf{Def:} \underline{projection} of $v$ onto $w$: $proj_{w}(v) =
+    \frac{<v, W>}{<w, w>} w = aw$
+
+\textbf{Def:} \underline{Gram-Shmidts procedure}
+$\begin{cases}
+        w_1 = v_1 \\
+        w_n = v_n - \sum_{i=1}^{n-1} proj_{w_i}v_n
+    \end{cases}$
+and finally normalize all vector $w$.
+
+\underline{Linear transformation and determinant}
+
+\textbf{Def:} Suppose $V$ and $W$ are vector spaces.
+$\mathcal{L}: V \rightarrow W$ is a linear transformation if
+$\mathcal{L}(\alpha v + \beta w) = \alpha \mathcal{L}(v) +
+    \beta \mathcal{L}(w) \ \forall \alpha, \beta \in \mathbb{R}, \forall
+    v, w \in V$.
+
+\underline{Determinant} of a square matrix - to understand how the volume of a set
+$S$ changes under the transformation $\Phi$. $\det(AB) = \det(A) \cdot \det(B)$.
+
+\textbf{Thm:} Consider matrix $A \in \mathbb{R}^{m \times n}$. $[\mathcal{N}(A)]^{\perp} = \mathcal{C}(A^{T})$.
+
+\textbf{Thm:} Consider $V \subseteq \mathbb{R}^n$. $\dim(V) + \dim(V^{\perp}) = n$.
+
+\textbf{Thm:} If $A \in \mathbb{R}^{m \times n}$ then $Rank(A) + nullity(A) = n$, where $nullity(A) = \dim(\mathcal{N}(A))$.
+
+\textbf{Thm:} Suppose matrix $A$ has both a left inverse and a right inverse, then they are the same, and are unique.
+
+\textbf{Thm:} One right inverse (if it exists) is $A^{-R} = A^T(AA^T)^{-1}$.
+
+\textbf{Thm:} One left inverse (if it exists) is $A^{-l} = (A^TA)^{-1}A^T$.
+
+\textbf{Thm:} Consider $A \in \mathbb{R}^{m \times n}$. $A$ has a right inverse iff it has full row rank.
+
+\textbf{Thm:} Consider $A \in \mathbb{R}^{m \times n}$. $A$ has a left inverse iff it has full column rank.
 \end{document}
