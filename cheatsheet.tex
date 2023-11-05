@@ -249,4 +249,24 @@ $S$ changes under the transformation $\Phi$. $\det(AB) = \det(A) \cdot \det(B)$.
 \textbf{Thm:} Consider $A \in \mathbb{R}^{m \times n}$. $A$ has a right inverse iff it has full row rank.
 
 \textbf{Thm:} Consider $A \in \mathbb{R}^{m \times n}$. $A$ has a left inverse iff it has full column rank.
+
+\textbf{Def:} projection on a vector space. Let $V$ be a subspace of $\mathbb{R}^n$ and $w \in \mathbb{R}^n$.
+denot $\displaystyle V_w = proj_{V} w$
+
+\textbf{Def:} Given a subspace $V \subseteq \mathbb{R}^n$, we can project $w$ on $V$ as follows
+\begin{enumerate}
+    \item $V_w \in V$.
+    \item $(w - V_w) \perp V$.
+\end{enumerate}
+
+\textbf{Def:} \underline{TODO: } place holder for definition for projection matrix.
+
+\textbf{Def:}SVD: $A \in \mathbb{R}_{r}^{m \times n}$ where $r \le \min \{m, n\}$. We can decompose $A$ into
+$A = U \Sigma V^T$, where $U \in \mathbb{R}^{m \times n}, V \in \mathbb{R}^{n \times n}$ and
+$\Sigma = \begin{bmatrix}
+        S & 0 \\
+        0 & 0
+    \end{bmatrix}$
+, where $S = diag(\sigma_1, \sigma_2, \sigma_3, \dots, \sigma_r)$. Moreover, $U$ and $V$ are orthogonal
+($U^T U = V^T V = I$)
 \end{document}
